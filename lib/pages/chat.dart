@@ -1,5 +1,6 @@
 import 'package:chat/controller/prefs_controller.dart';
 import 'package:chat/styles/cores.dart';
+import 'package:chat/widgets/aviso.dart';
 import 'package:chat/widgets/mensagem_enviada.dart';
 import 'package:chat/widgets/mensagem_recebida.dart';
 import 'package:flutter/material.dart';
@@ -122,6 +123,7 @@ class _ChatState extends State<Chat> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
+                      Aviso.aviso('Aviso! Biston Gay'),
                       MensagemEnviada.mensagemEnviada('Salve mano!', '15:30'),
                       MensagemRecebida.mensagemRecebida('Salve', '15:31'),
                     ],
@@ -222,7 +224,7 @@ class _ChatState extends State<Chat> {
                       child: Center(
                         child: IconButton(
                           onPressed: () async {
-                            //await PrefsController.teste();
+                            await PrefsController.teste();
                           },
                           icon: const Icon(
                             Icons.send,

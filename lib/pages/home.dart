@@ -18,8 +18,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return Scaffold(
-      body: const IndexedStack(
-        children: [
+      body: IndexedStack(
+        index: paginaSelecionada,
+        children: const [
           Chat(),
           Amigos(),
           Config(),
